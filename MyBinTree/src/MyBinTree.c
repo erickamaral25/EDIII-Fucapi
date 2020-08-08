@@ -79,16 +79,21 @@ node* insertNode(int valor, node* left, node* right){
 //
 
 
-void main(){
+int main(void){
 	//cria um no tipo folha na arvore binaria
 	node* n = insertNode(47, insertNode(25, insertNode(11, NULL, NULL), insertNode(43, NULL, NULL)), insertNode(77, insertNode(65, NULL, NULL), insertNode(93, NULL, NULL)));
 
+	//imprime a arvore em pre-order
 	printf("Printing Pre-Order: ");
 	printPreOrder(n);
 
+	//imprime a arvore em in-order
 	printf("\nPrinting In-Order: ");
 	printInOrder(n);
 
+	//imprime a arvore em post-order
 	printf("\nPrinting Post-Order: ");
 	printPostOrder(n);
+
+	return EXIT_SUCCESS;
 }
